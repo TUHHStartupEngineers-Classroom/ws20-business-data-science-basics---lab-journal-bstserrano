@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Bruno Serrano" />
+
+<meta name="date" content="2020-12-03" />
+
+<title>Journal</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MyLabJournal</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="journal.html">Journal</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Class notes
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="dictionary.html">Dictionary</a>
+    </li>
+    <li>
+      <a href="data_wrangling.html">Data Wrangling</a>
+    </li>
+    <li>
+      <a href="ggplot_graphs.html">ggplot graphs</a>
+    </li>
+    <li>
+      <a href="machine_learning.html">machine learning</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="links.html">Links</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Journal</h1>
+<h4 class="author">Bruno Serrano</h4>
+<h4 class="date">2020-12-03</h4>
+
+</div>
+
+
+<div id="introduction-to-the-tidyverse" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction to the tidyverse</h1>
+<div id="challenge" class="section level2">
+<h2><span class="header-section-number">1.1</span> Challenge</h2>
+<pre class="r"><code># SALES ANALYSIS ----
+
+# 1.0 Load libraries ----
+library(tidyverse)
+library(tidyr)
+library(ggplot2) 
+library(dplyr)
+library(readxl)
+library(lubridate)
+#library(wrtexl)
+library(writexl)
+# 2.0 Importing Files ----
+
+bikes &lt;- read_excel(&quot;~/RStudio/data-science/00_data/01_bike_sales/01_raw_data/bikes.xlsx&quot;)
+bikeshops &lt;- read_excel(&quot;~/RStudio/data-science/00_data/01_bike_sales/01_raw_data/bikeshops.xlsx&quot;)
+orderlines &lt;- read_excel(&quot;~/RStudio/data-science/00_data/01_bike_sales/01_raw_data/orderlines.xlsx&quot;)
+
+
+# 3.0 Examining Data ----
+bikes %&gt;% glimpse</code></pre>
+<pre><code>## Rows: 231
+## Columns: 9
+## $ bike.id        &lt;dbl&gt; 2875, 2873, 2874, 2876, 2877, 2225, 2091, 2086, 2088, …
+## $ model          &lt;chr&gt; &quot;Aeroad CF SL Disc 8.0 Di2&quot;, &quot;Aeroad CF SLX Disc 9.0 E…
+## $ model.year     &lt;dbl&gt; 2020, 2020, 2020, 2020, 2020, 2019, 2019, 2021, 2020, …
+## $ frame.material &lt;chr&gt; &quot;carbon&quot;, &quot;carbon&quot;, &quot;carbon&quot;, &quot;carbon&quot;, &quot;carbon&quot;, &quot;car…
+## $ weight         &lt;dbl&gt; 7.60, 7.27, 7.10, 7.73, 7.83, 6.80, 6.80, 7.60, 7.30, …
+## $ price          &lt;dbl&gt; 4579, 6919, 6429, 5069, 3609, 6139, 5359, 2629, 3699, …
+## $ category       &lt;chr&gt; &quot;Road - Race - Aeroad&quot;, &quot;Road - Race - Aeroad&quot;, &quot;Road …
+## $ gender         &lt;chr&gt; &quot;unisex&quot;, &quot;unisex&quot;, &quot;unisex&quot;, &quot;unisex&quot;, &quot;unisex&quot;, &quot;uni…
+## $ url            &lt;chr&gt; &quot;https://www.canyon.com/en-de/road-bikes/race-bikes/ae…</code></pre>
+<pre class="r"><code>bikes %&gt;% select(bike.id, model, price)</code></pre>
+<pre><code>## # A tibble: 231 x 3
+##    bike.id model                       price
+##      &lt;dbl&gt; &lt;chr&gt;                       &lt;dbl&gt;
+##  1    2875 Aeroad CF SL Disc 8.0 Di2    4579
+##  2    2873 Aeroad CF SLX Disc 9.0 ETAP  6919
+##  3    2874 Aeroad CF SLX Disc 9.0 Di2   6429
+##  4    2876 Aeroad CF SL Disc 8.0 ETAP   5069
+##  5    2877 Aeroad CF SL Disc 8.0        3609
+##  6    2225 Aeroad CF SLX 9.0 SL         6139
+##  7    2091 Aeroad CF SLX 9.0 Di2        5359
+##  8    2086 Aeroad CF SL 7.0             2629
+##  9    2088 Aeroad CF SL 8.0 Di2         3699
+## 10    2120 Aeroad WMN CF SL 8.0         3219
+## # … with 221 more rows</code></pre>
+<pre class="r"><code># 4.0 Joining Data ----
+bike_orderlines_joined &lt;- orderlines %&gt;%
+  left_join(bikeshops, by = c(&quot;customer.id&quot; = &quot;bikeshop.id&quot;)) %&gt;%
+  left_join(bikes, by = c(&quot;product.id&quot; = &quot;bike.id&quot;))
+
+# 5.0 Wrangling Data ----
+bike_orderlines_joined_wrangled &lt;- bike_orderlines_joined %&gt;% 
+  separate(col = category, 
+           into = c(&quot;category.1&quot;, &quot;category.2&quot;, &quot;category.3&quot;), 
+           sep = &quot; - &quot;) %&gt;%
+#  group_by(category.1) %&gt;%
+#  summarize(total.price = sum(price*quantity))
+  mutate(total.price = price*quantity) %&gt;%
+  set_names(names(.) %&gt;% str_replace_all(&quot;\\.&quot;, &quot;_&quot;))
+
+
+# 6.0 Business Insights ----
+# 6.1 Sales by Year ----
+
+# Step 1 - Manipulate
+sales_by_year &lt;- bike_orderlines_joined_wrangled %&gt;%
+  transmute(date = year(order_date), total_price) %&gt;%
+  group_by(date) %&gt;%
+  summarise(total_sales = sum(total_price)) %&gt;%
+  mutate(sales_text = scales::dollar(total_sales, big.mark = &quot;.&quot;, 
+                                     decimal.mark = &quot;,&quot;, 
+                                     prefix = &quot;&quot;, 
+                                     suffix = &quot; €&quot;))
+  
+  
+# Step 2 - Visualize
+sales_by_year %&gt;% ggplot(aes(x=date, y=total_sales)) +
+  geom_col(fill = &quot;#2DC6D6&quot;) + 
+  geom_label(aes(label = sales_text)) + 
+  geom_smooth(method = &quot;lm&quot;, se = FALSE) + 
+  scale_y_continuous(labels = scales::dollar_format(big.mark = &quot;.&quot;, 
+                                                    decimal.mark = &quot;,&quot;, 
+                                                    prefix = &quot;&quot;, 
+                                                    suffix = &quot; €&quot;)) +
+  labs(
+    title    = &quot;Revenue by year&quot;,
+    subtitle = &quot;Upward Trend&quot;,
+    x = &quot;&quot;, # Override defaults for x and y
+    y = &quot;Revenue&quot;
+  )</code></pre>
+<p><img src="journal_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># 6.2 Sales by Year and Category 2 ----
+
+# Step 1 - Manipulate
+sales_by_year_category_1 &lt;- bike_orderlines_joined_wrangled %&gt;%
+  mutate(date = year(order_date)) %&gt;%
+  select(date, category_1, total_price) %&gt;%
+  group_by(date, category_1) %&gt;%
+  summarise(total_sales = sum(total_price)) %&gt;%
+  ungroup() %&gt;%
+  mutate(sales_text = scales::dollar(total_sales, big.mark = &quot;.&quot;, 
+                                     decimal.mark = &quot;,&quot;, 
+                                     prefix = &quot;&quot;, 
+                                     suffix = &quot; €&quot;))  
+
+# Step 2 - Visualize
+sales_by_year_category_1 %&gt;% ggplot(aes(x=date, y=total_sales, fill = category_1)) +
+  geom_col() + 
+  facet_wrap(~ category_1) +
+  scale_y_continuous(labels = scales::dollar_format(big.mark = &quot;.&quot;, 
+                                                    decimal.mark = &quot;,&quot;, 
+                                                    prefix = &quot;&quot;, 
+                                                    suffix = &quot; €&quot;)) </code></pre>
+<p><img src="journal_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>labs(
+  title = &quot;Revenue by year and main category&quot;,
+  subtitle = &quot;Each product category has an upward trend&quot;,
+  fill = &quot;Main category&quot; # Changes the legend name
+)</code></pre>
+<pre><code>## $fill
+## [1] &quot;Main category&quot;
+## 
+## $title
+## [1] &quot;Revenue by year and main category&quot;
+## 
+## $subtitle
+## [1] &quot;Each product category has an upward trend&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;labels&quot;</code></pre>
+<pre class="r"><code># 7.0 Writing Files ----
+bike_orderlines_joined_wrangled %&gt;%
+  write_xlsx(&quot;/Users/bruno/RStudio/data-science/02_data_wrangling/bike_orderlines.xlsx&quot;)
+
+# 7.2 CSV ----
+bike_orderlines_joined_wrangled %&gt;% 
+  write_csv(&quot;/Users/bruno/RStudio/data-science/02_data_wrangling/bike_orderlines.csv&quot;)
+# 7.3 RDS ----
+bike_orderlines_joined_wrangled %&gt;% 
+  write_rds(&quot;/Users/bruno/RStudio/data-science/02_data_wrangling/bike_orderlines.rds&quot;)
+
+# 8.0 Challenge ----
+
+# Step 1 - Manipulate
+sale_by_location &lt;- bike_orderlines_joined_wrangled %&gt;%
+  select(location, order_date, total_price,) %&gt;%
+  mutate(year = year(order_date)) %&gt;%
+  separate(col = location, 
+           into = c(&quot;city&quot;, &quot;state&quot;),
+           sep = &quot;, &quot;) %&gt;%
+  group_by(state, year) %&gt;%
+  summarize(sales = sum(total_price))
+
+# Step 2 - Visualize
+sale_by_location %&gt;% ggplot(aes(x=year, y=sales, fill = state)) +
+  geom_col() + 
+  scale_y_continuous(labels = scales::dollar_format(big.mark = &quot;.&quot;, 
+                                                    decimal.mark = &quot;,&quot;, 
+                                                    prefix = &quot;&quot;, 
+                                                    suffix = &quot; €&quot;)) +
+  labs(
+    title = &quot;Revenue by year and State&quot;,
+    fill = &quot;States&quot;) + 
+   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+   facet_wrap(~ state) </code></pre>
+<p><img src="journal_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+</div>
+</div>
+<div id="data-adquisition" class="section level1">
+<h1><span class="header-section-number">2</span> Data Adquisition</h1>
+<div id="challenge-1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Challenge</h2>
+<pre class="r"><code>#Libraries ----
+library(tidyverse)
+library(RSQLite)
+library(DBI)
+library(dplyr)
+library(httr)
+library(glue)
+library(jsonlite)
+library(keyring)
+library(rstudioapi)
+library(rvest)
+library(stringr)
+library(purrr)
+library(RedditExtractoR)
+library(xopen)
+library(stringi)
+library(furrr)
+
+# 1 Get data form Data Base----
+# Connect to Data Base
+con &lt;- RSQLite::dbConnect(drv    = SQLite(), 
+                          dbname = &quot;/Users/bruno/RStudio/data-science/00_data/02_chinook/Chinook_Sqlite.sqlite&quot;) # Connect to data base
+# Collect Data
+dbListTables(con)</code></pre>
+<pre><code>##  [1] &quot;Album&quot;         &quot;Artist&quot;        &quot;Customer&quot;      &quot;Employee&quot;     
+##  [5] &quot;Genre&quot;         &quot;Invoice&quot;       &quot;InvoiceLine&quot;   &quot;MediaType&quot;    
+##  [9] &quot;Playlist&quot;      &quot;PlaylistTrack&quot; &quot;Track&quot;</code></pre>
+<pre class="r"><code>tbl(con, &quot;Album&quot;)</code></pre>
+<pre><code>## # Source:   table&lt;Album&gt; [?? x 3]
+## # Database: sqlite 3.33.0
+## #   [/Users/bruno/RStudio/data-science/00_data/02_chinook/Chinook_Sqlite.sqlite]
+##    AlbumId Title                                 ArtistId
+##      &lt;int&gt; &lt;chr&gt;                                    &lt;int&gt;
+##  1       1 For Those About To Rock We Salute You        1
+##  2       2 Balls to the Wall                            2
+##  3       3 Restless and Wild                            2
+##  4       4 Let There Be Rock                            1
+##  5       5 Big Ones                                     3
+##  6       6 Jagged Little Pill                           4
+##  7       7 Facelift                                     5
+##  8       8 Warner 25 Anos                               6
+##  9       9 Plays Metallica By Four Cellos               7
+## 10      10 Audioslave                                   8
+## # … with more rows</code></pre>
+<pre class="r"><code>album_tbl &lt;- tbl(con, &quot;Album&quot;) %&gt;% collect()
+x &lt;- dbGetQuery(con, &#39;SELECT * FROM Artist&#39;)
+
+# Disconnect from Data Base
+dbDisconnect(con)
+con</code></pre>
+<pre><code>## &lt;SQLiteConnection&gt;
+##   DISCONNECTED</code></pre>
+<pre class="r"><code># 2 Get data from url ----
+resp &lt;- GET(&quot;https://swapi.dev/api/people/1/&quot;)
+
+# Wrapped into a function
+sw_api &lt;- function(path) {
+  url &lt;- modify_url(url = &quot;https://swapi.dev&quot;, path = glue(&quot;/api{path}&quot;))
+  resp &lt;- GET(url)
+  stop_for_status(resp) # automatically throws an error if a request did not succeed
+}
+# Gewt data from Luke
+resp &lt;- sw_api(&quot;/people/1&quot;)
+resp %&gt;% 
+  .$content %&gt;% 
+  rawToChar() %&gt;% 
+  fromJSON()</code></pre>
+<pre><code>## $name
+## [1] &quot;Luke Skywalker&quot;
+## 
+## $height
+## [1] &quot;172&quot;
+## 
+## $mass
+## [1] &quot;77&quot;
+## 
+## $hair_color
+## [1] &quot;blond&quot;
+## 
+## $skin_color
+## [1] &quot;fair&quot;
+## 
+## $eye_color
+## [1] &quot;blue&quot;
+## 
+## $birth_year
+## [1] &quot;19BBY&quot;
+## 
+## $gender
+## [1] &quot;male&quot;
+## 
+## $homeworld
+## [1] &quot;http://swapi.dev/api/planets/1/&quot;
+## 
+## $films
+## [1] &quot;http://swapi.dev/api/films/1/&quot; &quot;http://swapi.dev/api/films/2/&quot;
+## [3] &quot;http://swapi.dev/api/films/3/&quot; &quot;http://swapi.dev/api/films/6/&quot;
+## 
+## $species
+## list()
+## 
+## $vehicles
+## [1] &quot;http://swapi.dev/api/vehicles/14/&quot; &quot;http://swapi.dev/api/vehicles/30/&quot;
+## 
+## $starships
+## [1] &quot;http://swapi.dev/api/starships/12/&quot; &quot;http://swapi.dev/api/starships/22/&quot;
+## 
+## $created
+## [1] &quot;2014-12-09T13:50:51.644000Z&quot;
+## 
+## $edited
+## [1] &quot;2014-12-20T21:17:56.891000Z&quot;
+## 
+## $url
+## [1] &quot;http://swapi.dev/api/people/1/&quot;</code></pre>
+<pre class="r"><code>content(resp)</code></pre>
+<pre><code>## $name
+## [1] &quot;Luke Skywalker&quot;
+## 
+## $height
+## [1] &quot;172&quot;
+## 
+## $mass
+## [1] &quot;77&quot;
+## 
+## $hair_color
+## [1] &quot;blond&quot;
+## 
+## $skin_color
+## [1] &quot;fair&quot;
+## 
+## $eye_color
+## [1] &quot;blue&quot;
+## 
+## $birth_year
+## [1] &quot;19BBY&quot;
+## 
+## $gender
+## [1] &quot;male&quot;
+## 
+## $homeworld
+## [1] &quot;http://swapi.dev/api/planets/1/&quot;
+## 
+## $films
+## $films[[1]]
+## [1] &quot;http://swapi.dev/api/films/1/&quot;
+## 
+## $films[[2]]
+## [1] &quot;http://swapi.dev/api/films/2/&quot;
+## 
+## $films[[3]]
+## [1] &quot;http://swapi.dev/api/films/3/&quot;
+## 
+## $films[[4]]
+## [1] &quot;http://swapi.dev/api/films/6/&quot;
+## 
+## 
+## $species
+## list()
+## 
+## $vehicles
+## $vehicles[[1]]
+## [1] &quot;http://swapi.dev/api/vehicles/14/&quot;
+## 
+## $vehicles[[2]]
+## [1] &quot;http://swapi.dev/api/vehicles/30/&quot;
+## 
+## 
+## $starships
+## $starships[[1]]
+## [1] &quot;http://swapi.dev/api/starships/12/&quot;
+## 
+## $starships[[2]]
+## [1] &quot;http://swapi.dev/api/starships/22/&quot;
+## 
+## 
+## $created
+## [1] &quot;2014-12-09T13:50:51.644000Z&quot;
+## 
+## $edited
+## [1] &quot;2014-12-20T21:17:56.891000Z&quot;
+## 
+## $url
+## [1] &quot;http://swapi.dev/api/people/1/&quot;</code></pre>
+<pre class="r"><code># Get data from WDI.DE
+resp &lt;- GET(&quot;https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=WDI.DE&quot;)
+token    &lt;- &quot;my_individual_token&quot;
+response &lt;- GET(glue(&quot;https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=WDI.DE&amp;apikey={token}&quot;))
+response</code></pre>
+<pre><code>## Response [https://www.alphavantage.co/query?function=GLOBAL_QUOTE&amp;symbol=WDI.DE&amp;apikey=my_individual_token]
+##   Date: 2020-12-03 22:12
+##   Status: 200
+##   Content-Type: application/json
+##   Size: 375 B
+## {
+##     &quot;Global Quote&quot;: {
+##         &quot;01. symbol&quot;: &quot;WDI.DE&quot;,
+##         &quot;02. open&quot;: &quot;0.5006&quot;,
+##         &quot;03. high&quot;: &quot;0.5280&quot;,
+##         &quot;04. low&quot;: &quot;0.4920&quot;,
+##         &quot;05. price&quot;: &quot;0.5280&quot;,
+##         &quot;06. volume&quot;: &quot;982337&quot;,
+##         &quot;07. latest trading day&quot;: &quot;2020-12-02&quot;,
+##         &quot;08. previous close&quot;: &quot;0.5074&quot;,
+## ...</code></pre>
+<pre class="r"><code># Securing Credentials ----
+alphavantage_api_url &lt;- &quot;https://www.alphavantage.co/query&quot;
+ticker               &lt;- &quot;WDI.DE&quot;
+GET(alphavantage_api_url, query = list(&#39;function&#39; = &quot;GLOBAL_QUOTE&quot;,
+                                       symbol     = ticker,
+                                       apikey     = askForPassword(&quot;token&quot;)))</code></pre>
+<pre><code>## Error in callRemote(sys.call(), parent.frame()): RStudio did not respond to rstudioapi IPC request</code></pre>
+<pre class="r"><code># Challenge 1 ----
+reddit_url &lt;- reddit_urls(search_terms = &quot;AI&quot;)</code></pre>
+<pre><code>## Cannot connect to the website, skipping...</code></pre>
+<pre class="r"><code>head(reddit_url, 10)</code></pre>
+<pre><code>##        date num_comments
+## 1  30-11-20         2299
+## 2  21-11-20         3447
+## 3  30-11-20          774
+## 4  22-11-20          848
+## 5  17-10-20         3674
+## 6  30-11-20          434
+## 7  28-11-20          210
+## 8  29-11-20          284
+## 9  20-11-20          295
+## 10 24-11-20          575
+##                                                                                                                                                                                                                                                                                                  title
+## 1                                                                                                                                                                                                        AI solves 50-year-old science problem in \030stunning advance\031 that could change the world
+## 2  This 2-Acre Vertical Farm Out-Produces 750 Acre \030Flat Farms\031 - The future of farms is vertical. It\031s also indoors, can be placed anywhere on the planet, is heavily integrated with robots and AI, and produces better fruits and vegetables while using 95% less water and 99% less land.
+## 3                                                                                                                                                                                               Google DeepMind&#39;s AlphaFold successfully predicts protein folding, solving 50-year-old problem with AI
+## 4                                                                                                                                                                      A survey of 1,000 people in Germany on AI, shows overwhelming support for humans retaining the final say in AI decision making.
+## 5                                                                                                                                                                                                                                           Deep-fake AI Face Generation (None of those people exist!)
+## 6                                                                                                           Cars become autonomous and traffic is controlled through AI. AI realizes cars are more efficient when in slipstream. AI connects cars in a line to minimize drag. AI returns us to trains.
+## 7                                                                                                                                                                                                                                              Enemy AI deciding where to take cover during a gunfight
+## 8                                                                                                                                                                                                             If your character is an exo, the crypt AI welcomes you home instead of saying intruders.
+## 9                                                                                                                                                                                                                                   Don&#39;t tell my wife, but my AI server is 45% sure she&#39;s an elephant
+## 10                                                                                                                                                                                                                                                    J&#39;ai \xe9t\xe9 agress\xe9 ce soir sur la ligne 3
+##            subreddit
+## 1         Futurology
+## 2         Futurology
+## 3          worldnews
+## 4         Futurology
+## 5  interestingasfuck
+## 6     Showerthoughts
+## 7             gaming
+## 8     DestinyTheGame
+## 9    ProgrammerHumor
+## 10            france
+##                                                                                                            URL
+## 1          http://www.reddit.com/r/Futurology/comments/k3zc5x/ai_solves_50yearold_science_problem_in_stunning/
+## 2            http://www.reddit.com/r/Futurology/comments/jyapvi/this_2acre_vertical_farm_outproduces_750_acre/
+## 3          http://www.reddit.com/r/worldnews/comments/k43v1q/google_deepminds_alphafold_successfully_predicts/
+## 4           http://www.reddit.com/r/Futurology/comments/jytbhk/a_survey_of_1000_people_in_germany_on_ai_shows/
+## 5  http://www.reddit.com/r/interestingasfuck/comments/jcs7rz/deepfake_ai_face_generation_none_of_those_people/
+## 6     http://www.reddit.com/r/Showerthoughts/comments/k3ljla/cars_become_autonomous_and_traffic_is_controlled/
+## 7               http://www.reddit.com/r/gaming/comments/k2mq5n/enemy_ai_deciding_where_to_take_cover_during_a/
+## 8    http://www.reddit.com/r/DestinyTheGame/comments/k30y1i/if_your_character_is_an_exo_the_crypt_ai_welcomes/
+## 9       http://www.reddit.com/r/ProgrammerHumor/comments/jxtefw/dont_tell_my_wife_but_my_ai_server_is_45_sure/
+## 10             http://www.reddit.com/r/france/comments/k0ft52/jai_\xe9t\xe9_agress\xe9_ce_soir_sur_la_ligne_3/</code></pre>
+<pre class="r"><code># Challenge 2 ----
+
+url_home          &lt;- &quot;https://www.rosebikes.com/bikes/road&quot;
+html_home         &lt;- read_html(url_home)
+bike_category_tbl &lt;- html_home %&gt;%
+  html_nodes(css = &quot;.catalog-navigation__link&quot;) %&gt;%
+  html_attr(&#39;href&#39;) %&gt;%
+  enframe(name = &quot;position&quot;, value = &quot;subdirectory&quot;) %&gt;%
+  mutate(
+    url = glue(&quot;https://www.rosebikes.com{subdirectory}&quot;)) %&gt;%
+  distinct(url)
+
+
+bike_category_url &lt;- bike_category_tbl$url[1]
+
+# Get the titles
+html_bike_category  &lt;- read_html(bike_category_url)
+bike_title_tbl        &lt;- html_bike_category %&gt;%
+  
+  html_nodes(css = &quot;.catalog-category-bikes__title-text&quot;) %&gt;%
+  html_text %&gt;%
+  str_remove(pattern = &quot;\\?.*&quot;) %&gt;%
+
+  enframe(name = &quot;position&quot;, value = &quot;title&quot;)
+
+# Get the Price for the bikes
+html_bike_category  &lt;- read_html(bike_category_url)
+bike_price_tbl        &lt;- html_bike_category %&gt;%
+
+  html_nodes(css = &quot;.catalog-category-bikes__price-title&quot;) %&gt;%
+  html_text %&gt;%
+
+  str_remove(pattern = &quot;\\?.*&quot;) %&gt;%
+
+  enframe(name = &quot;position&quot;, value = &quot;price&quot;)
+
+bike_title_price &lt;- left_join(bike_title_tbl, bike_price_tbl, by = c(&quot;position&quot; = &quot;position&quot;))
+
+bike_title_price</code></pre>
+<pre><code>## # A tibble: 9 x 3
+##   position title                  price               
+##      &lt;int&gt; &lt;chr&gt;                  &lt;chr&gt;               
+## 1        1 &quot;\nPRO SL DISC\n&quot;      &quot;\nfrom €1,599.00\n&quot;
+## 2        2 &quot;\nPRO SL\n&quot;           &quot;\nfrom €1,199.00\n&quot;
+## 3        3 &quot;\nREVEAL FOUR DISC\n&quot; &quot;\nfrom €2,499.00\n&quot;
+## 4        4 &quot;\nREVEAL FOUR\n&quot;      &quot;\nfrom €2,099.00\n&quot;
+## 5        5 &quot;\nREVEAL SIX DISC\n&quot;  &quot;\nfrom €3,499.00\n&quot;
+## 6        6 &quot;\nX-LITE FOUR DISC\n&quot; &quot;\nfrom €2,699.00\n&quot;
+## 7        7 &quot;\nX-LITE FOUR\n&quot;      &quot;\nfrom €2,199.00\n&quot;
+## 8        8 &quot;\nX-LITE SIX DISC\n&quot;  &quot;\nfrom €3,899.00\n&quot;
+## 9        9 &quot;\nX-LITE SIX\n&quot;       &quot;\nfrom €3,499.00\n&quot;</code></pre>
+</div>
+</div>
+<div id="data-wrangling" class="section level1">
+<h1><span class="header-section-number">3</span> Data Wrangling</h1>
+<div id="challenge-2" class="section level2">
+<h2><span class="header-section-number">3.1</span> Challenge</h2>
+<pre class="r"><code># Libraries ----
+library(data.table)
+library(dplyr)
+library(purrr)
+library(vroom)
+library(tidyverse)
+library(lubridate)
+
+
+# Assignee ----
+col_types &lt;- list(
+  id = col_character(),
+  type = col_character(),
+  name_first = col_skip(),
+  name_last = col_skip(),
+  organization = col_character()
+)
+
+assignee_tbl &lt;- vroom(
+  file       = &quot;/Users/bruno/RStudio/data-science/02_data_wrangling/assignee.tsv&quot;, 
+  delim      = &quot;\t&quot;, 
+  col_types  = col_types,
+  na         = c(&quot;&quot;, &quot;NA&quot;, &quot;NULL&quot;)
+)
+# Patent_assignee -----
+col_types &lt;- list(
+  patent_id = col_character(),
+  assignee_id = col_character(),
+  location_id = col_skip()
+)
+patent_assignee_tbl &lt;- vroom(
+  file       = &quot;/Users/bruno/RStudio/data-science/02_data_wrangling/patent_assignee.tsv&quot;, 
+  delim      = &quot;\t&quot;, 
+  col_types  = col_types,
+  na         = c(&quot;&quot;, &quot;NA&quot;, &quot;NULL&quot;)
+)
+# Patent ----
+col_types &lt;- list(
+  id = col_character(),
+  type = col_skip(),
+  country = col_skip(),
+  date = col_date(&quot;%Y-%m-%d&quot;),
+  abstract = col_skip(),
+  title = col_skip(),
+  kind = col_skip(),
+  num_claims = col_skip(),
+  filename = col_skip(),
+  withdrawn = col_skip()
+  
+)
+patent_tbl &lt;- vroom(
+  file       = &quot;/Users/bruno/RStudio/data-science/02_data_wrangling/patent.tsv&quot;, 
+  delim      = &quot;\t&quot;, 
+  col_types  = col_types,
+  na         = c(&quot;&quot;, &quot;NA&quot;, &quot;NULL&quot;)
+)
+# USPC ----
+col_types &lt;- list(
+  uuid = col_skip(),
+  patent_id = col_character(),
+  mainclass_id = col_character(),
+  subclass_id = col_skip(),
+  sequence = col_skip()
+)
+uspc_tbl &lt;- vroom(
+  file       = &quot;/Users/bruno/RStudio/data-science/02_data_wrangling/uspc.tsv&quot;, 
+  delim      = &quot;\t&quot;, 
+  col_types  = col_types,
+  na         = c(&quot;&quot;, &quot;NA&quot;, &quot;NULL&quot;)
+)
+
+# Challenge 1 ----
+tbl_1 &lt;- assignee_tbl %&gt;% filter(type == 2) %&gt;%
+  left_join(patent_assignee_tbl, by = c(&quot;id&quot; = &quot;assignee_id&quot;)) %&gt;%
+  filter(!is.na(organization)) %&gt;%
+  group_by(organization) %&gt;%
+  count(organization, sort=TRUE) %&gt;%
+  slice(1:10)
+tbl_1</code></pre>
+<pre><code>## # A tibble: 226,686 x 2
+## # Groups:   organization [226,686]
+##    organization                                                                n
+##    &lt;chr&gt;                                                                   &lt;int&gt;
+##  1 &quot;!j Incorporated&quot;                                                           2
+##  2 &quot;!maginethis Renovations, LLC&quot;                                              3
+##  3 &quot;.Decimal, Inc.&quot;                                                            7
+##  4 &quot;.Engineering, Inc.&quot;                                                        2
+##  5 &quot;.PEF Industries, Inc.&quot;                                                     2
+##  6 &quot;.S. Philips Corporation&quot;                                                   2
+##  7 &quot;.Vapex Technologies, Inc.&quot;                                                 2
+##  8 &quot;&#39;brellabox Inc.&quot;                                                           2
+##  9 &quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;A\&quot;\&quot;\&quot;…     2
+## 10 &quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;A\&quot;\&quot;\&quot;…     2
+## # … with 226,676 more rows</code></pre>
+<pre class="r"><code># Challenge 2 ----
+tbl_2 &lt;- assignee_tbl %&gt;% left_join(patent_assignee_tbl, by = c(&quot;id&quot; = &quot;assignee_id&quot;)) %&gt;%
+  left_join(patent_tbl, by = c(&quot;patent_id&quot; = &quot;id&quot;)) %&gt;%
+  filter(type == 2) %&gt;%
+  filter(year(date) == 2019) %&gt;%
+  select(&quot;organization&quot;, &quot;patent_id&quot;) %&gt;%
+  filter(!is.na(organization)) %&gt;%
+  group_by(organization) %&gt;%
+  count(organization, sort=TRUE) %&gt;%
+  ungroup() %&gt;%
+  slice(1:10)
+tbl_2</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    organization                                    n
+##    &lt;chr&gt;                                       &lt;int&gt;
+##  1 International Business Machines Corporation  9265
+##  2 Intel Corporation                            3526
+##  3 Microsoft Technology Licensing, LLC          3106
+##  4 Apple Inc.                                   2817
+##  5 Ford Global Technologies, LLC                2624
+##  6 Amazon Technologies, Inc.                    2533
+##  7 QUALCOMM Incorporated                        2359
+##  8 Google Inc.                                  2290
+##  9 General Electric Company                     1860
+## 10 Hewlett-Packard Development Company, L.P.    1589</code></pre>
+<pre class="r"><code># Challenge 3 ----
+top_sector &lt;- uspc_tbl %&gt;% group_by(mainclass_id) %&gt;%
+  count(mainclass_id, sort=TRUE) %&gt;%
+  slice(1)
+top_sector</code></pre>
+<pre><code>## # A tibble: 1,237 x 2
+## # Groups:   mainclass_id [1,237]
+##    mainclass_id     n
+##    &lt;chr&gt;        &lt;int&gt;
+##  1 -0T              1
+##  2 ;16              1
+##  3 ;47              1
+##  4 ???              1
+##  5 0                4
+##  6 00               3
+##  7 002              6
+##  8 004             12
+##  9 008              8
+## 10 01               1
+## # … with 1,227 more rows</code></pre>
+<pre class="r"><code>top_10_companies_ww &lt;- assignee_tbl %&gt;% left_join(patent_assignee_tbl, by = c(&quot;id&quot; = &quot;assignee_id&quot;)) %&gt;%
+  filter(!is.na(organization)) %&gt;%
+  group_by(organization) %&gt;%
+  count(organization, sort=TRUE) %&gt;%
+  ungroup() %&gt;%
+  slice(1:10)
+top_10_companies_ww</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    organization                                     n
+##    &lt;chr&gt;                                        &lt;int&gt;
+##  1 International Business Machines Corporation 139092
+##  2 Samsung Electronics Co., Ltd.                93562
+##  3 Canon Kabushiki Kaisha                       75910
+##  4 Sony Corporation                             54343
+##  5 Kabushiki Kaisha Toshiba                     49443
+##  6 General Electric Company                     47122
+##  7 Hitachi, Ltd.                                45375
+##  8 Intel Corporation                            42157
+##  9 Fujitsu Limited                              37197
+## 10 Hewlett-Packard Development Company, L.P.    35573</code></pre>
+<pre class="r"><code>tbl_3 &lt;- assignee_tbl %&gt;% filter(organization %in% top_10_companies_ww$organization) %&gt;%
+  left_join(patent_assignee_tbl, by = c(&quot;id&quot; = &quot;assignee_id&quot;)) %&gt;%
+  left_join(uspc_tbl, by = c(&quot;patent_id&quot; = &quot;patent_id&quot;)) %&gt;%
+  filter(!is.na(mainclass_id)) %&gt;%
+  group_by(mainclass_id) %&gt;%
+  count(mainclass_id, sort = TRUE) %&gt;%
+  ungroup() %&gt;%
+  slice(1:5)
+tbl_3</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   mainclass_id     n
+##   &lt;chr&gt;        &lt;int&gt;
+## 1 257          90981
+## 2 438          52071
+## 3 365          40283
+## 4 370          36369
+## 5 358          36227</code></pre>
+</div>
+</div>
+<div id="data-visualization" class="section level1">
+<h1><span class="header-section-number">4</span> Data Visualization</h1>
+<div id="challenge-3" class="section level2">
+<h2><span class="header-section-number">4.1</span> Challenge</h2>
+<pre class="r"><code># Libraries ----
+library(tidyverse)
+library(lubridate)
+library(scales)
+library(viridisLite)
+library(RColorBrewer)
+library(ggrepel)
+library(maps)
+
+# Challenge 1 ----
+covid_data_tbl &lt;- read_csv(&quot;https://opendata.ecdc.europa.eu/covid19/casedistribution/csv&quot;)
+
+covid_data_wrangled &lt;- covid_data_tbl %&gt;%
+  rename(comulative_cases = &quot;Cumulative_number_for_14_days_of_COVID-19_cases_per_100000&quot;) %&gt;%
+  filter((countriesAndTerritories == &quot;Germany&quot; |
+         countriesAndTerritories == &quot;France&quot; | 
+         countriesAndTerritories ==&quot;United_Kingdom&quot; |
+         countriesAndTerritories == &quot;Spain&quot; |
+         countriesAndTerritories == &quot;United_States_of_America&quot;) &amp;
+         year == 2020) %&gt;%
+  mutate(dateRep = as.Date(dateRep, &quot;%d/%m/%Y&quot;)) %&gt;%
+  group_by(countriesAndTerritories) %&gt;%
+  arrange(dateRep) %&gt;%
+  mutate(cum_cases = cumsum(cases))
+
+
+data_ends &lt;- covid_data_wrangled %&gt;% slice(which.max(dateRep)) %&gt;% filter(countriesAndTerritories == &quot;United_States_of_America&quot;)
+
+covid_data_wrangled %&gt;% ggplot(aes(dateRep, cum_cases, color = countriesAndTerritories)) +
+  geom_line(size = 0.5, linetype = 1) +
+  labs(
+    title = str_glue(&quot;COVID-19 confirmed cases worldwide&quot;),
+    subtitle = str_glue(&quot;As of {max(covid_data_wrangled$dateRep)}&quot;),
+    color = &quot;Country / Region&quot;,
+    x = &quot;Year 2020&quot;,
+    y = &quot;Cumulative Cases&quot;) +
+  scale_y_continuous(breaks=seq(0, 20e6, by = 2.5e6),
+                     labels = scales::dollar_format(scale = 1e-6, 
+                                                    prefix = &quot;&quot;,
+                                                    suffix = &quot; M&quot;,
+                                                    accuracy = 0.1)) +
+   scale_x_date(date_labels = &quot;%B&quot;, date_breaks = &quot;months&quot;) +
+   theme_minimal() +
+   theme(axis.title.x = element_text(face = &quot;bold&quot;),
+           axis.title.y = element_text(face = &quot;bold&quot;),
+           axis.text.x = element_text(angle = 45),
+           legend.position = &quot;bottom&quot;) +
+   guides(col = guide_legend(nrow=2)) +
+   geom_label(data = data_ends, aes(label = scales::dollar(cum_cases,
+                                                                scale = 1e-6,
+                                                                prefix = &quot;&quot;,
+                                                                suffix = &quot; M&quot;)),
+              vjust=1.5, color=&quot;black&quot;) +
+   scale_color_brewer(palette = &quot;Dark2&quot;)</code></pre>
+<p><img src="journal_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code># Challenge 2 -----
+covid_data_world &lt;- covid_data_tbl %&gt;% mutate(across(countriesAndTerritories, str_replace_all, &quot;_&quot;, &quot; &quot;)) %&gt;%
+  mutate(countriesAndTerritories = case_when(countriesAndTerritories == &quot;United Kingdom&quot; ~ &quot;UK&quot;,
+                                              countriesAndTerritories == &quot;United States of America&quot; ~ &quot;USA&quot;,
+                                              countriesAndTerritories == &quot;Czechia&quot; ~ &quot;Czech Republic&quot;,
+                                              TRUE ~ countriesAndTerritories)) %&gt;%
+  rename(region = &quot;countriesAndTerritories&quot;) %&gt;%
+  group_by(region) %&gt;%
+  summarise(mort_rate = sum(deaths)/max(popData2019), total_deaths = sum(deaths)) %&gt;%
+  ungroup()
+
+total_deaths_worldwide &lt;- sum(covid_data_world$total_deaths) * 1e-5
+       
+world_map &lt;- map_data(&quot;world&quot;) %&gt;% left_join(covid_data_world, by = c(&quot;region&quot; = &quot;region&quot;))
+
+ggplot(world_map, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = mort_rate ), color = &quot;white&quot;) +
+  scale_fill_viridis_c(breaks=seq(0, 1.2e-3, by = 3e-4), option = &quot;B&quot;, end = 0.5, direction = -1, labels = scales::dollar_format(scale = 1e2,
+                                                                    prefix = &quot;&quot;,
+                                                                    suffix = &quot; %&quot;,
+                                                                    accuracy = 0.001)) +
+  labs(
+    title = str_glue(&quot;Comfirmed COVID-19 deaths relative to size population&quot;),
+    subtitle = str_glue(&quot;Morre than {floor(total_deaths_worldwide)*1e-1} Million comfirmed COVID-19 deaths worldwide&quot;),
+    fill = &quot;Mortality Rate&quot;) + 
+  theme_minimal() +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank()) </code></pre>
+<p><img src="journal_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

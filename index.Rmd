@@ -20,3 +20,21 @@ This is a template example for lab journaling. Students in the data science cour
 3. See the [links page](https://tuhhstartupengineers.github.io/lab_journal_website/links.html) for lots of helpful links on learning R.
 
 4. Change everything to make it your own.
+
+```{r}
+# Libraries ----
+library(tidyverse)
+library(lubridate)
+library(scales)
+library(viridisLite)
+library(RColorBrewer)
+library(ggrepel)
+library(maps)
+library(readxl)
+
+# Challenge 1 ----
+bikes <- read_excel("~/RStudio/data-science/00_data/01_bike_sales/01_raw_data/bikes.xlsx") %>%
+  slice(1)
+bikes
+
+```
